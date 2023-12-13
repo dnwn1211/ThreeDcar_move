@@ -7,21 +7,21 @@ import { TextureLoader } from "three/src/loaders/TextureLoader";
 
 export function Ground() {
     const [ref] = usePlane(
-    () => ({
-        type: 'Static',
-        rotation: [-Math.PI / 2, 0, 0]
-    }),
-    useRef(null)
+      () => ({
+          type: 'Static',
+          rotation: [-Math.PI / 2, 0, 0]
+      }),
+      useRef(null)
     );
 
     const gridMap = useLoader(
-    TextureLoader,
-    process.env.PUBLIC_URL + "/textures/grid.png"
+      TextureLoader,
+      process.env.PUBLIC_URL + "/textures/grid.png"
     );
 
     const aoMap = useLoader(
-    TextureLoader,
-    process.env.PUBLIC_URL + "/textures/ground-ao.png"
+      TextureLoader,
+      process.env.PUBLIC_URL + "/textures/ground-ao.png"
     );
 
   const alphaMap = useLoader(
